@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>名前</th>
+			<th>メールアドレス</th>
+			<th>パスワード</th>
+			<th>備考</th>
+		</tr>
+		<tr th:each="user : ${users}">
+		  <td th:text="${user.id}">test1</td>
+		  <td th:text="${user.name}">test1</td>
+		  <td th:text="${user.email}">test1</td>
+		  <td th:text="${user.password}">test1</td>
+		  <td th:text="${user.remarks}">test1</td>
+		</tr>
+	</table>
+
+	<br/>
+	<form action="#" th:action="@{/users/new}" th:object="${indexForm}" method="get">
+	     <button type="submit" name="action" value="save">新規ユーザー</button>
+	</form>
+</body>
+</html>

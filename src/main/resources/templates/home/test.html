@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index</title>
+</head>
+<body>
+	<br/>
+			<tr>
+			<th>ID</th>
+			<th>名前</th>
+			<th>メールアドレス</th>
+		</tr>
+		<tr th:each="idxfm : ${indexForm}">
+		  <td th:text="${idxfm.name}">test1</td>
+		  <td th:text="${idxfm.email}">test1</td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>
